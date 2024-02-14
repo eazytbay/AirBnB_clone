@@ -198,7 +198,7 @@ class HBNBCommand(cmd.Cmd):
             for a, b in eval(argl[2]).items():
                 if (a in obj.__class__.__dict__.keys() and
                         type(obj.__class__.__dict__[a]) in {str, int, float}):
-                    valtype = type(obj.__class__.__dict__[a])
+                    typeval = type(obj.__class__.__dict__[a])
                     obj.__dict__[a] = typeval(b)
                 else:
                     obj.__dict__[a] = b
